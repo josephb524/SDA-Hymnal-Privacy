@@ -1,74 +1,202 @@
-***
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Official Adventist Hymnal</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --text-color: #34495e;
+            --bg-color: #f8f9fa;
+            --container-bg: #ffffff;
+            --accent-color: #3498db;
+            --border-color: #e9ecef;
+        }
 
-# Official Adventist Hymnal – Privacy Policy
-**Effective date:** May 01, 2026
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
 
-### 1) Who we are
-Official Adventist Hymnal (“the App”, “we”, “us”) is a mobile app that provides access to lyrics from the Seventh‑day Adventist Hymnal (1985), streams available hymn audio, and offers an AI-powered study companion called Bible Chat.
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--container-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
 
-### 2) Summary
-We prioritize your privacy. We do not create user accounts and do not collect traditional personal information (like your name or email).
-*   **Hymnal:** Lyrics, favorites, and playlists are stored locally on your device.
-*   **Audio:** Standard internet logs (e.g., IP address) may be processed by our streaming provider solely to deliver content.
-*   **Bible Chat (Pro):** To verify your subscription and provide AI responses, we process a unique subscription identifier and your chat queries through secure third-party providers.
-*   **No Tracking:** We do not sell your data, track you across other apps, or use advertising identifiers.
+        header {
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
 
-### 3) Information we process
-We do not collect personal data such as your name, email, or location.
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
 
-**On‑device data (stays on your device)**
-*   Favorites and playlists.
-*   Appearance settings (e.g., dark mode, font size, theme).
-*   **Bible Chat History:** Your conversations are stored locally on your device and are not stored on our servers.
+        .effective-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-**Pro Feature Data (Bible Chat)**
-*   **Subscription Verification:** To provide access to Bible Chat, the App sends your App Store `originalTransactionId` to our secure backend (hosted on Cloudflare). This ID is used solely to verify your subscription status with Apple and to enforce fair-usage rate limits.
-*   **Chat Content:** When you ask a question, your message and recent conversation history are sent to our AI inference provider (Fireworks AI) to generate a response. These messages are processed to provide the service and are not used to train AI models.
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-top: 40px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+        }
 
-**Network requests**
-*   **Audio:** Requests go to a third‑party music infrastructure provider. Their servers receive standard network information (e.g., IP address) required to route content.
-*   **AI Services:** Requests to our Bible Chat backend include standard network metadata (IP address, device/OS version) required for security and service reliability.
+        p, li {
+            margin-bottom: 15px;
+        }
 
-### 4) How we use information
-*   Provide hymn lyrics and audio playback.
-*   Maintain your on‑device settings and favorites.
-*   Verify your Pro subscription status to grant access to Bible Chat.
-*   Generate AI-powered responses for your Bible and hymn-related questions.
+        ul {
+            padding-left: 20px;
+        }
 
-### 5) Sharing
-We do not sell or rent your data. We share information with service providers only as necessary to provide the App’s features:
-*   **Cloudflare:** Hosts our backend for subscription verification and rate limiting.
-*   **Fireworks AI:** Processes Bible Chat queries to generate responses.
-*   **Apple:** Handles all payment processing and subscription management.
+        strong {
+            color: var(--primary-color);
+        }
 
-### 6) Data retention
-*   **On‑device:** Local data (favorites, chat history) remains on your device until you delete it or uninstall the App.
-*   **Subscription Cache:** We may cache your subscription status (linked to your `originalTransactionId`) on our secure backend for up to 24 hours to ensure fast access to Pro features.
+        .footer-summary {
+            margin-top: 50px;
+            padding: 30px;
+            background: #f1f3f5;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
 
-### 7) Your choices
-*   **Delete Chat History:** You can clear your conversations within the Bible Chat settings.
-*   **Manage Subscription:** Subscriptions are managed entirely through your Apple ID settings.
-*   **App Analytics:** Any crash reporting or system analytics are governed by your global Apple settings (*Settings > Privacy & Security*).
+        .footer-summary h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
 
-### 8) Children’s privacy
-The App is suitable for a general audience. We do not knowingly collect or solicit personal information from children. Bible Chat is intended to be a study tool; however, we do not require any personal identification to use it.
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 40px 0;
+        }
 
-### 9) Security
-We use industry-standard HTTPS encryption for all communication between the App, our backend, and AI providers. While no transmission is 100% secure, we strive to use reasonable safeguards to protect the integrity of the service.
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                padding: 20px;
+                border-radius: 0;
+            }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
 
-### 10) International use
-Your requests for audio or Bible Chat responses may be routed to servers in different countries (primarily the United States) depending on our service providers' infrastructure.
+<div class="container">
+    <header>
+        <h1>Privacy Policy</h1>
+        <div class="effective-date">Effective date: May 01, 2026</div>
+    </header>
 
-### 11) Changes to this policy
-If we make material changes to how we handle data, we will update this page and the “Effective date.”
+    <p><strong>Official Adventist Hymnal</strong> (“the App”, “we”, “us”) is a mobile app that provides access to lyrics from the Seventh‑day Adventist Hymnal (1985), streams available hymn audio, and offers an AI-powered study companion called Bible Chat.</p>
 
-### 12) Contact
-Questions or concerns?
-**Email:** josephb401@hotmail.com
+    <h3>1) Summary</h3>
+    <p>We prioritize your privacy. We do not create user accounts and do not collect traditional personal information (like your name or email).</p>
+    <ul>
+        <li><strong>Hymnal:</strong> Lyrics, favorites, and playlists are stored locally on your device.</li>
+        <li><strong>Audio:</strong> Standard internet logs (e.g., IP address) may be processed by our streaming provider solely to deliver content.</li>
+        <li><strong>Bible Chat (Pro):</strong> To verify your subscription and provide AI responses, we process a unique subscription identifier and your chat queries through secure third-party providers.</li>
+        <li><strong>No Tracking:</strong> We do not sell your data, track you across other apps, or use advertising identifiers.</li>
+    </ul>
 
----
+    <h3>2) Information we process</h3>
+    <p>We do not collect personal data such as your name, email, or location.</p>
 
-**App Store “App Privacy” disclosure (summary)**
-*   **Data Used to Track You:** None
-*   **Data Linked to You:** None
-*   **Data Not Linked to You:** Identifiers (Transaction ID for subscription verification), Diagnostics (if enabled via Apple).
+    <p><strong>On‑device data (stays on your device)</strong></p>
+    <ul>
+        <li>Favorites and playlists.</li>
+        <li>Appearance settings (e.g., dark mode, font size, theme).</li>
+        <li><strong>Bible Chat History:</strong> Your conversations are stored locally on your device and are not stored on our servers.</li>
+    </ul>
+
+    <p><strong>Pro Feature Data (Bible Chat)</strong></p>
+    <ul>
+        <li><strong>Subscription Verification:</strong> To provide access to Bible Chat, the App sends your App Store <code>originalTransactionId</code> to our secure backend (hosted on Cloudflare). This ID is used solely to verify your subscription status with Apple and to enforce fair-usage rate limits.</li>
+        <li><strong>Chat Content:</strong> When you ask a question, your message and recent conversation history are sent to our AI inference provider (Fireworks AI) to generate a response. These messages are processed to provide the service and are not used to train AI models.</li>
+    </ul>
+
+    <p><strong>Network requests</strong></p>
+    <ul>
+        <li><strong>Audio:</strong> Requests go to a third‑party music infrastructure provider. Their servers receive standard network information (e.g., IP address) required to route content.</li>
+        <li><strong>AI Services:</strong> Requests to our Bible Chat backend include standard network metadata (IP address, device/OS version) required for security and service reliability.</li>
+    </ul>
+
+    <h3>3) How we use information</h3>
+    <ul>
+        <li>Provide hymn lyrics and audio playback.</li>
+        <li>Maintain your on‑device settings and favorites.</li>
+        <li>Verify your Pro subscription status to grant access to Bible Chat.</li>
+        <li>Generate AI-powered responses for your Bible and hymn-related questions.</li>
+    </ul>
+
+    <h3>4) Sharing</h3>
+    <p>We do not sell or rent your data. We share information with service providers only as necessary to provide the App’s features:</p>
+    <ul>
+        <li><strong>Cloudflare:</strong> Hosts our backend for subscription verification and rate limiting.</li>
+        <li><strong>Fireworks AI:</strong> Processes Bible Chat queries to generate responses.</li>
+        <li><strong>Apple:</strong> Handles all payment processing and subscription management.</li>
+    </ul>
+
+    <h3>5) Data retention</h3>
+    <ul>
+        <li><strong>On‑device:</strong> Local data (favorites, chat history) remains on your device until you delete it or uninstall the App.</li>
+        <li><strong>Subscription Cache:</strong> We may cache your subscription status on our secure backend for up to 24 hours to ensure fast access to Pro features.</li>
+    </ul>
+
+    <h3>6) Your choices</h3>
+    <ul>
+        <li><strong>Delete Chat History:</strong> You can clear your conversations within the Bible Chat settings.</li>
+        <li><strong>Manage Subscription:</strong> Subscriptions are managed entirely through your Apple ID settings.</li>
+        <li><strong>App Analytics:</strong> Any crash reporting or system analytics are governed by your global Apple settings.</li>
+    </ul>
+
+    <h3>7) Children’s privacy</h3>
+    <p>The App is suitable for a general audience. We do not knowingly collect or solicit personal information from children.</p>
+
+    <h3>8) Security</h3>
+    <p>We use industry-standard HTTPS encryption for all communication between the App, our backend, and AI providers.</p>
+
+    <h3>9) International use</h3>
+    <p>Your requests for audio or Bible Chat responses may be routed to servers in different countries (primarily the United States) depending on our service providers' infrastructure.</p>
+
+    <h3>10) Changes to this policy</h3>
+    <p>If we make material changes to how we handle data, we will update this page and the “Effective date.”</p>
+
+    <h3>11) Contact</h3>
+    <p>Questions or concerns?<br>
+    <strong>Email:</strong> <a href="mailto:josephb401@hotmail.com">josephb401@hotmail.com</a></p>
+
+    <div class="footer-summary">
+        <h4>App Store “App Privacy” Summary</h4>
+        <ul>
+            <li><strong>Data Used to Track You:</strong> None</li>
+            <li><strong>Data Linked to You:</strong> None</li>
+            <li><strong>Data Not Linked to You:</strong> Identifiers (Transaction ID for subscription verification), Diagnostics.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
