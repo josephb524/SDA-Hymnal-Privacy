@@ -107,7 +107,7 @@
 <div class="container">
     <header>
         <h1>Privacy Policy</h1>
-        <div class="effective-date">Effective date: May 01, 2026</div>
+        <div class="effective-date">Effective date: November 10, 2026</div>
     </header>
 
     <p><strong>Official Adventist Hymnal</strong> (“the App”, “we”, “us”) is a mobile app that provides access to lyrics from the Seventh‑day Adventist Hymnal (1985), streams available hymn audio, and offers an AI-powered study companion called Bible Chat.</p>
@@ -118,6 +118,7 @@
         <li><strong>Hymnal:</strong> Lyrics, favorites, and playlists are stored locally on your device.</li>
         <li><strong>Audio:</strong> Standard internet logs (e.g., IP address) may be processed by our streaming provider solely to deliver content.</li>
         <li><strong>Bible Chat (Pro):</strong> To verify your subscription and provide AI responses, we process a unique subscription identifier and your chat queries through secure third-party providers.</li>
+        <li><strong>Usage Counts:</strong> The App sends anonymous counts of how the Bible Chat subscription screen and our in-app banners are used to our own server (see section 2).</li>
         <li><strong>No Tracking:</strong> We do not sell your data, track you across other apps, or use advertising identifiers.</li>
     </ul>
 
@@ -133,13 +134,19 @@
 
     <p><strong>Pro Feature Data (Bible Chat)</strong></p>
     <ul>
-        <li><strong>Subscription Verification:</strong> To provide access to Bible Chat, the App sends your App Store <code>originalTransactionId</code> to our secure backend (hosted on Cloudflare). This ID is used solely to verify your subscription status with Apple and to enforce fair-usage rate limits.</li>
+        <li><strong>Subscription Verification:</strong> To provide access to Bible Chat, the App sends your App Store <code>originalTransactionId</code> to our secure backend (hosted on Cloudflare). This ID is used solely to verify your subscription status with Apple and to enforce fair-usage rate limits. To enforce the daily limit, our server keeps this ID with the number of questions asked that day for up to 2 days.</li>
         <li><strong>Chat Content:</strong> When you ask a question, your message and recent conversation history are sent to our AI inference provider (Fireworks AI) to generate a response. These messages are processed to provide the service and are not used to train AI models.</li>
+    </ul>
+
+    <p><strong>Anonymous usage counts</strong></p>
+    <ul>
+        <li>To understand how the Bible Chat subscription screen and our in-app banners perform, the App sends simple event counts to our own server (hosted on Cloudflare): when the subscription screen is shown or closed, which plan was tapped, and whether a purchase was completed, cancelled, pending, failed or restored; and when a banner for one of our other apps is shown, tapped or dismissed.</li>
+        <li>These events carry no account, name, device identifier or chat content. Our server keeps only totals per day. To count unique devices each day, it stores a one-way hash of the IP address, the app's network signature (user agent) and the date; the hash changes every day and is deleted after that day. The IP address itself is never stored.</li>
     </ul>
 
     <p><strong>Network requests</strong></p>
     <ul>
-        <li><strong>Audio:</strong> Requests go to a third‑party music infrastructure provider. Their servers receive standard network information (e.g., IP address) required to route content.</li>
+        <li><strong>Audio:</strong> Hymn audio is streamed from our storage on Cloudflare (or, for a recording not stored there, from Audius, a third-party music service). These servers receive standard network information (e.g., IP address) required to deliver the audio.</li>
         <li><strong>AI Services:</strong> Requests to our Bible Chat backend include standard network metadata (IP address, device/OS version) required for security and service reliability.</li>
     </ul>
 
@@ -149,12 +156,13 @@
         <li>Maintain your on‑device settings and favorites.</li>
         <li>Verify your Pro subscription status to grant access to Bible Chat.</li>
         <li>Generate AI-powered responses for your Bible and hymn-related questions.</li>
+        <li>Measure how the subscription screen and in-app banners perform, using the anonymous usage counts described in section 2.</li>
     </ul>
 
     <h3>4) Sharing</h3>
     <p>We do not sell or rent your data. We share information with service providers only as necessary to provide the App’s features:</p>
     <ul>
-        <li><strong>Cloudflare:</strong> Hosts our backend for subscription verification and rate limiting.</li>
+        <li><strong>Cloudflare:</strong> Hosts our backend for subscription verification and rate limiting, the hymn audio, and the anonymous usage counts.</li>
         <li><strong>Fireworks AI:</strong> Processes Bible Chat queries to generate responses.</li>
         <li><strong>Apple:</strong> Handles all payment processing and subscription management.</li>
     </ul>
@@ -163,6 +171,8 @@
     <ul>
         <li><strong>On‑device:</strong> Local data (favorites, chat history) remains on your device until you delete it or uninstall the App.</li>
         <li><strong>Subscription Cache:</strong> We may cache your subscription status on our secure backend for up to 24 hours to ensure fast access to Pro features.</li>
+        <li><strong>Daily Question Counts:</strong> Kept with your subscription ID for up to 2 days, then deleted.</li>
+        <li><strong>Usage Counts:</strong> Kept as daily totals; the daily unique-device hashes are deleted after each day.</li>
     </ul>
 
     <h3>6) Your choices</h3>
@@ -192,8 +202,8 @@
         <h4>App Store “App Privacy” Summary</h4>
         <ul>
             <li><strong>Data Used to Track You:</strong> None</li>
-            <li><strong>Data Linked to You:</strong> None</li>
-            <li><strong>Data Not Linked to You:</strong> Identifiers (Transaction ID for subscription verification), Diagnostics.</li>
+            <li><strong>Data Linked to You:</strong> Identifiers (the subscription's transaction ID), Purchases (subscription status and purchase results), Usage Data (product interaction, including the daily Bible Chat question count).</li>
+            <li><strong>Data Not Linked to You:</strong> Usage Data (advertising data: views and taps of the banners for our other apps).</li>
         </ul>
     </div>
 </div>
